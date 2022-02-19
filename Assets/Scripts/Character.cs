@@ -56,6 +56,7 @@ public class Character : MonoBehaviour
     {
         switch (weapon) {
             case Weapon.Bat:
+                if(state != State.Dead)
                 state = State.RunningToEnemy;
                 break;
             case Weapon.Pistol:
@@ -129,6 +130,7 @@ public class Character : MonoBehaviour
 
             case State.Dead :
               animator.SetTrigger("Dead");
+                
               
             
                 break;
